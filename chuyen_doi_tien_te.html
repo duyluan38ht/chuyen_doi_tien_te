@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><input type="text"  id="cot1"></td>
+        <td>
+            <select id="cot2">
+                <option value="23000"> VNĐ </option>
+                <option value="1"> USD </option>
+                <option value="106"> YEN </option>
+            </select>
+        </td>
+        <td>
+            <select id="cot3">
+                <option value="23000"> VNĐ </option>
+                <option value="1"> USD </option>
+                <option value="106"> YEN </option>
+            </select>
+        </td>
+        <td>
+        <td><button onclick="doiTien()">Covert</button></td>
+        </td>
+    </tr>
+</table>
+<p id="cot4">Result</p>
+<script>
+function doiTien(){
+    let c1=document.getElementById('cot1').value;
+    let c2=document.getElementById('cot2').value;
+    let c3=document.getElementById('cot3').value;
+    let Result= c1*c3/c2;
+    document.getElementById('cot4').innerText="Kết quả:" +Result;
+}
+</script>
+</table>
+</body>
+</html>
